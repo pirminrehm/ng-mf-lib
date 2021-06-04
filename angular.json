@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "@ng-mf/shared": {
+      "projectType": "library",
+      "root": "projects/ng-mf/shared",
+      "sourceRoot": "projects/ng-mf/shared/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ng-mf/shared/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-mf/shared/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ng-mf/shared/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-mf/shared/src/test.ts",
+            "tsConfig": "projects/ng-mf/shared/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-mf/shared/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "@ng-mf/shared"
 }
