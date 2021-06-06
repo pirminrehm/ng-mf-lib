@@ -1,8 +1,10 @@
-# Angular Multi-Repo Module Federation Example (Micro Frontends)
+# Angular Multi-Repo Webpack Module Federation Example (Micro Frontends)
 
-This repo is part of the angular mlti-repo module federation example, explained [here](https://github.com/pirminrehm/ng-mf-shell#readme).
+## The Shared Lib
 
-## Provide the Shared Lib
+This repository is part of an Angular mlti-repo Webpack Module Federation example, explained [here](https://github.com/pirminrehm/ng-mf-shell#readme).
+
+### Provide the Shared Lib
 
 To provide the lib, run:
 
